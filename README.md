@@ -16,3 +16,12 @@ The Agent does not know about possible outcomes or their respective probabilitie
 
 One-Step Temporal-Difference:
 Given the timestamp $$ /in $$
+
+
+**One-Step Temporal-Difference:** Given the timestep $t$, the Q-value update rule is:
+
+$$
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left[ r_{t+1} + \gamma \max_{a} Q(s_{t+1}, a) - Q(s_t, a_t) \right]
+$$
+
+where $\alpha$ is the learning rate and $\gamma$ is the discount factor.
